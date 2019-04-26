@@ -1,0 +1,86 @@
+.intro {
+  padding: 131px 0 94px;
+  background-image: url("../img/header_back.jpg");
+  background-size: cover;
+
+  @include desktop-full {
+    background-size: 100%;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+  }
+
+  @include desktop-start {
+    padding: 60px 0 60px;
+    background-size: 100%;
+  }
+
+  @include tablet {
+    padding: 40px 0;
+    background-size: auto;
+    background-image: url("../img/header_back_mob_left.jpg"),
+  url("../img/header_back_mob_right.jpg");
+    background-position: left -150px top 0, right -150px top 0;
+  }
+
+  @include mobile {
+    background-position: left -220px top 0, right -220px top 0;
+  }
+
+  &__wrapper {
+    @include wrapper;
+    display: flex;
+
+    @include desktop-start {
+      align-items: center;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    width: 600px;
+    margin-top: -30px;
+
+    @include tablet {
+      order: 1;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+
+  &__info {
+    width: 570px;
+    padding-left: 98px;
+
+    @include desktop-start {
+      padding-left: 60px;
+    }
+
+    @include tablet {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    @include layout-title;
+    margin-bottom: 51px;
+    font-size: 56px;
+
+    @include tablet {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__text {
+    @include layout-text;
+    margin: 0;
+
+    @include tablet {
+      margin-bottom: 34px;
+    }
+  }
+}

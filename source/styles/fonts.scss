@@ -1,0 +1,19 @@
+$sf: 'SF UI Display', 'Century Gothic', sans-serif;
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: local('SF UI Display Bold'), local('SFUIDisplay-Bold'),
+  url('../fonts/SFUIDisplay-Bold.woff2') format('woff2'),
+  url('../fonts/SFUIDisplay-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: local('SF UI Display Regular'), local('SFUIDisplay-Regular'),
+  url('../fonts/SFUIDisplay-Regular.woff2') format('woff2'),
+  url('../fonts/SFUIDisplay-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}

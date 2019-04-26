@@ -1,0 +1,167 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &--wt {
+    color: $white;
+  }
+
+  &__image {
+    //width: 100%;
+  }
+
+  &__title {
+    @include text(24px, 1.2em, 400);
+    display: flex;
+    align-items: center;
+    max-width: 270px;
+    min-height: 112px;
+    margin: 0;
+    padding: 32px 0 24px;
+    text-align: center;
+
+    @include tablet {
+      min-height: auto;
+      font-size: 20px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 30px;
+
+    @include tablet {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__info-item {
+    @include text(18px, 32px, 400);
+    margin: 0;
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    &--bg {
+      @include text(16px, 26px, 400);
+      margin-left: 11px;
+      padding: 0 15px;
+      background-color: $gray-spot;
+      border-radius: 4px;
+    }
+
+    &--bg-s {
+      margin-left: 11px;
+      background-color: $gray-space;
+    }
+
+    &--bg-b {
+      background-color: $blue;
+      margin-left: 16px;
+      padding: 0 10px;
+      color: $white;
+    }
+  }
+
+  &__price-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 41px;
+
+    @include tablet {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__price {
+    @include text(36px, 26px, 700);
+    margin: 0;
+
+    @include desktop-start {
+      font-size: 28px;
+    }
+
+    @include tablet {
+      font-size: 26px;
+    }
+
+    &--old {
+      @include text(26px, 26px, 400);
+      position: relative;
+      margin-top: 2px;
+      margin-right: 19px;
+      color: $gray-medium;
+
+      @include desktop-start {
+        font-size: 22px;
+      }
+
+      @include tablet {
+        font-size: 20px;
+      }
+
+      &::before {
+        position: absolute;
+        top: 15px;
+        left: -6px;
+        content: "";
+        display: block;
+        width: calc(100% - 12px);
+        height: 1px;
+        background-color: $gray-medium;
+
+        @include tablet {
+          left: -3px;
+        }
+      }
+    }
+  }
+
+  &__link {
+    width: 183px;
+
+    @include mobile {
+      width: 60%;
+      max-width: 183px;
+    }
+  }
+
+  &--small {
+
+    & .card__image {
+      margin-bottom: 26px;
+    }
+
+    & .card__title {
+      min-height: auto;
+      margin-bottom: 12px;
+      padding: 0;
+    }
+
+    & .card__price {
+      @include text(26px, 26px, 400);
+      color: #4c4c4c;
+
+      @include tablet {
+        font-size: 20px;
+      }
+
+      & span {
+        @include text(36px, 26px, 700);
+        padding-right: 7px;
+        padding-left: 9px;
+        color: $black;
+
+        @include tablet {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}

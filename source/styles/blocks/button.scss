@@ -1,0 +1,55 @@
+.button {
+  @include text(22px, 1.2em, 400);
+  display: block;
+  padding: 8px 20px 10px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+
+  @include mobile {
+    font-size: 16px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--wb {
+    border: 1px solid $white;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $white-almost;
+      color: $gray-space;
+      background-color: $white-almost;
+    }
+  }
+
+  &--bb {
+    border: 1px solid $blue;
+    color: $blue;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $gray-spot;
+      background-color: $gray-spot;
+      color: $white;
+    }
+  }
+
+  &--gb {
+    border: 1px solid $black;
+    color: $black;
+
+    &:hover,
+    &:focus {
+      border: 1px solid #2da2fd;
+      background-color: #2da2fd;
+      color: $white;
+    }
+  }
+
+}

@@ -1,0 +1,48 @@
+.installments {
+  padding: 60px 0 77px;
+
+  @include tablet {
+    padding: 40px 0 0;
+  }
+
+  &__wrapper {
+    @include wrapper
+  }
+
+  &__title {
+    @include layout-title;
+    margin: 0 auto 85px;
+    max-width: 580px;
+    text-align: center;
+    line-height: 64px;
+
+    @include tablet {
+      margin-bottom: 50px;
+      line-height: 1.2em;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+
+    @include desktop-start {
+      width: calc(100% / 3 - 30px);
+    }
+
+    @include tablet {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+}

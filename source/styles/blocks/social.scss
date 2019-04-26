@@ -1,0 +1,27 @@
+.social {
+  display: flex;
+  list-style: none;
+  padding: 0;
+
+  &__item {
+    margin-left: 20px;
+
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: $gray;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      color: $gray-space;
+    }
+  }
+
+  &__icon {
+    max-width: 23px;
+    max-height: 23px;
+  }
+}

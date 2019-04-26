@@ -1,0 +1,35 @@
+.shop {
+  padding: 35px 25px 35px;
+  background-color: #f6f6f6;
+
+  &__shop {
+    @include text(18px, 22px, 400);
+    margin: 0 0 1px;
+    color: $blue;
+  }
+
+  &__address {
+    @include text(16px, 22px, 400);
+    margin: 0;
+  }
+
+  &__sub {
+    @include text(16px, 22px, 400);
+    position: relative;
+    margin: 0;
+    padding-left: 30px;
+    color: #f26268;
+
+    &::before {
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      display: block;
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #f26268 url("../img/metro_icon.png") no-repeat center top 1px;
+    }
+  }
+}

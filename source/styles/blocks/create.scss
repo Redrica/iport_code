@@ -1,0 +1,61 @@
+.create {
+  padding: 55px 0 88px;
+  background-color: #ebebeb;
+  background-image: url("../img/create_back.png");
+  background-size: cover;
+
+  @include desktop-full {
+    background-size: 100%;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+  }
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
+  &__wrapper {
+    @include wrapper;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    @include layout-title;
+    margin-bottom: 96px;
+    text-align: center;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__text {
+    @include layout-text;
+    width: 570px;
+    padding-left: 99px;
+
+    @include tablet {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+
+  &__image {
+    width: 600px;
+
+    @include tablet {
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 40px;
+    }
+  }
+}

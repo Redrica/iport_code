@@ -1,0 +1,82 @@
+.exchange {
+  padding: 43px 0 50px;
+  text-align: center;
+  color: $white;
+  background-color: #2da2fd;
+  background-image: url("../img/change_back.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+
+  &__wrapper {
+    @include wrapper;
+  }
+
+  &__title {
+    @include layout-title;
+    margin-bottom: 21px;
+  }
+
+  &__text {
+    @include layout-text;
+    max-width: 625px;
+    margin: 0 auto 41px;
+    line-height: 1.2em;
+  }
+
+  &__button {
+    width: 184px;
+    margin: 0 auto;
+
+    @include mobile {
+      width: 60%;
+      max-width: 183px;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 37px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__from {
+    margin-top: -2px;
+
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+
+  &__sign {
+    align-self: center;
+    flex-shrink: 0;
+    display: block;
+    width: 90px;
+    height: 97px;
+    margin: 22px 0 0 27px;
+
+    @include tablet {
+      width: 60px;
+      height: auto;
+      margin: 0 0 0 20px;
+    }
+
+    @include mobile {
+      margin: 30px 0;
+    }
+  }
+
+  &__to {
+    margin-bottom: -2px;
+
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+}

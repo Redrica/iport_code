@@ -1,0 +1,74 @@
+.contacts {
+  position: relative;
+  width: 100%;
+
+  &__info {
+    position: absolute;
+    z-index: 10;
+    top: 140px;
+    left: calc((100vw - 1280px) / 2 - 63px);
+    width: 806px;
+    height: 492px;
+    padding: 53px 118px 55px;
+    background-color: $white;
+    box-shadow: 10px 10px 50px 10px transparentize($black, 0.75);
+
+    @include desktop-start {
+      left: 0;
+      width: 600px;
+      padding: 40px 60px;
+    }
+
+    @include tablet {
+      position: static;
+      width: 100%;
+      height: auto;
+      padding: 40px 30px;
+    }
+
+    @include mobile {
+      padding: 40px 20px;
+    }
+  }
+
+  &__title {
+    @include layout-title;
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    @include layout-text;
+    margin-bottom: 49px;
+    line-height: 30px;
+  }
+
+  &__select {
+    @include text(18px, 30px, 400);
+    width: 100%;
+    height: 42px;
+    padding: 1px 0 0 22px;
+    border: 1px solid $gray;
+    -webkit-appearance: none;
+    background-image: url("../img/select-arrow.png");
+    background-repeat: no-repeat;
+    background-position: right 10px top 16px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__shop {
+    margin-top: 19px;
+  }
+
+  &__map {
+    width: 100%;
+    height: 820px;
+    background-color: $gray-light;
+
+    @include tablet {
+      height: 300px;
+    }
+  }
+}
